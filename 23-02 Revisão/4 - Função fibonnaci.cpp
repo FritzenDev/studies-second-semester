@@ -2,18 +2,18 @@
 #include <string.h>
 
 /*
-Implemente uma funÁ„o recursiva que recebe um n˙mero íní e retorna n-Èsimo numero da
+Implemente uma fun√ß√£o recursiva que recebe um n√∫mero ‚Äôn‚Äô e retorna n-√©simo numero da
 sequencia de fibonacci. A sequencia de fibonacci funciona da seguinte forma:
-se n = 1 ent„o fibonacci(n) = 0
-se n = 2 ent„o fibonacci(n) = 1
-se n > 2 ent„o fibonacci(n) = fibonacci(n-1)+fibonacci(n-2)
+se n = 1 ent√£o fibonacci(n) = 0
+se n = 2 ent√£o fibonacci(n) = 1
+se n > 2 ent√£o fibonacci(n) = fibonacci(n-1)+fibonacci(n-2)
 */
 
 
 
 int calc(int n) {
 	if (n == 1) {
-		return 1; //Precisa ser 1 nos dois para seguir a ordem correta da fibonnaci || Se quiser fazer do jeito proposto, seguir· outra lÛgica
+		return 1; //Precisa ser 1 nos dois para seguir a ordem correta da fibonnaci || Se quiser fazer do jeito proposto, seguir√° outra l√≥gica
 	}
 	if (n == 2) {
 		return 1;
@@ -33,7 +33,7 @@ int main () {
 		
 		int result = calc(num);
 		printf("Resultado: %i", result);
-
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
