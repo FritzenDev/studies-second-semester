@@ -3,9 +3,9 @@
 #include <math.h>
 
 /*
-Implemente uma função que receba três números reais, ’a’, ’b’ e ’c’, que são os coeficientes de
-uma equação do segundo grau e retorne o valor do delta, que é dado por ’b
-2 - 4ac’
+Implemente uma funÃ§Ã£o que receba trÃªs nÃºmeros reais, â€™aâ€™, â€™bâ€™ e â€™câ€™, que sÃ£o os coeficientes de
+uma equaÃ§Ã£o do segundo grau e retorne o valor do delta, que Ã© dado por â€™b
+2 - 4acâ€™
 */
 
 double num_real(double a, double b, double c) {
@@ -23,7 +23,7 @@ int main () {
 		scanf("%lf %lf %lf", &n1, &n2, &n3);
 		double resultado = num_real(n1, n2, n3);
 		printf("Resultado: %.2lf", resultado);
-
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
