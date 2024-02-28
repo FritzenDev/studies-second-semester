@@ -2,8 +2,8 @@
 #include <string.h>
 
 /*
-Implemente uma funÁ„o que recebe como par‚metros dois valores inteiros, por meio de passgem
-de par‚metros, e troque o conte˙do deles.
+Implemente uma fun√ß√£o que recebe como par√¢metros dois valores inteiros, por meio de passgem
+de par√¢metros, e troque o conte√∫do deles.
 */
 
 void dois_val(int n1, int n2) {
@@ -20,7 +20,7 @@ int main () {
 		printf("\nDepois: ");
 		dois_val(3, 4);
 
-
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
