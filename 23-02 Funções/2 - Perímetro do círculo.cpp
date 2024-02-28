@@ -2,8 +2,8 @@
 #include <string.h>
 
 /*
-FaÁa uma funÁ„o que recebe por par‚metro o raio de um cÌrculo e calcule e retorne
-a perÌmetro do cÌrculo.
+Fa√ßa uma fun√ß√£o que recebe por par√¢metro o raio de um c√≠rculo e calcule e retorne
+a per√≠metro do c√≠rculo.
 */
 
 float calc_perimetro(int num) {
@@ -22,7 +22,7 @@ int main () {
 		float result = calc_perimetro(raio);
 		
 		printf("Resultado: %.2f", result);
-
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
