@@ -2,8 +2,8 @@
 #include <string.h>
 
 /*
-Implemente uma função que receba quatro números inteiros e retorne a soma dos três maiores
-números, dentre os quatro recebidos.
+Implemente uma funÃ§Ã£o que receba quatro nÃºmeros inteiros e retorne a soma dos trÃªs maiores
+nÃºmeros, dentre os quatro recebidos.
 */
 
 int soma(int quant) {
@@ -23,7 +23,7 @@ int main () {
 	do {
 		int result = soma(4);
 		printf("\nResultado: %i", result);
-		
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
