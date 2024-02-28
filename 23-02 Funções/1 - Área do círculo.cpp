@@ -3,8 +3,8 @@
 #include <math.h>
 
 /*
-FaÁa uma funÁ„o que recebe por par‚metro o raio de um cÌrculo e calcule e retorne
-a ·rea do cÌrculo.
+Fa√ßa uma fun√ß√£o que recebe por par√¢metro o raio de um c√≠rculo e calcule e retorne
+a √°rea do c√≠rculo.
 */
 
 float calc_area(int num) {
@@ -23,7 +23,7 @@ int main () {
 		float result = calc_area(raio);
 		
 		printf("Resultado: %.2f", result);
-
+		scanf("%s", &continuar);
 	} while (continuar == 'S' || continuar == 's');
 
 	return 0;
