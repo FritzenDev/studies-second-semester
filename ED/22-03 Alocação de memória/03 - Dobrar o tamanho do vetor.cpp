@@ -37,7 +37,6 @@ int main () {
 					printf("Insira um valor: ");
 					scanf("%i", &value);
 					
-					x[size++] = value;
 
 					if (value == 0) {
 						printf("\nNúmeros digitados:\n");
@@ -47,6 +46,8 @@ int main () {
 						free(x);
 						printf("\n\n");
 						break;
+					} else {
+						x[size++] = value; //Colocar depois do check de value == 0 para que 0 não conte nos valores
 					} 					
 			}
 			if (choice == 0) {
