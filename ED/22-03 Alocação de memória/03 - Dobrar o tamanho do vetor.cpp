@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 /*
-3. Escreva um programa que tenha inicialmente um vetor de 10 posições, onde o usuário pode inserir
+3. Escreva um programa que tenha inicialmente um vetor de 10 posiÃ§Ãµes, onde o usuÃ¡rio pode inserir
 valores neste vetor quantas vezes ele quiser e quando ele decidir parar, os valores armazenados
-no vetor devem ser impressos. Sempre que o vetor estiver com mais de 70% das posições
-preenchidas, ele deve dobrar de tamanho. Dica: Faça um menu para o usuário poder escolher se
-inseri um novo elemento ou finaliza a computação.
+no vetor devem ser impressos. Sempre que o vetor estiver com mais de 70% das posiÃ§Ãµes
+preenchidas, ele deve dobrar de tamanho. Dica: FaÃ§a um menu para o usuÃ¡rio poder escolher se
+inseri um novo elemento ou finaliza a computaÃ§Ã£o.
 */
 
 int main () {
@@ -24,32 +24,35 @@ int main () {
 		
 		while (1) {
 			printf("1. Inserir valor\n");
-			printf("2. Finalizar\n");
-			printf("Escolha uma opção: ");
+			printf("0. Sair\n");
+			printf("Escolha uma opÃ§Ã£o (Quando desejar sair, digite 0): ");
 			scanf("%i", &choice);
 			printf("\n");
-			switch (choice) {
-				case 1:
-					if (size >= length * 0.7) {
+			while (choice == 1) {
+				if (size >= length * 0.7) {
 						length *= 2;
 						x = (int *)realloc(x, length * sizeof(int));
-					}
+					}		
+								
 					printf("Insira um valor: ");
 					scanf("%i", &value);
+					
 					x[size++] = value;
-					printf("\n");
-					break;
-				case 2:
-					printf("Números digitados:\n");
-					for (int i = 0; i < size; i++) {
+
+					if (value == 0) {
+						printf("\nNÃºmeros digitados:\n");
+						for (int i = 0; i < size; i++) {
 						printf("%i ", x[i]);
-					}
-					printf("\n");
-					free(x);
-					return 0;
-				default:
-					printf("Opção inválida\n");
+						}
+						free(x);
+						printf("\n\n");
+						break;
+					} 					
 			}
+			if (choice == 0) {
+				printf("VocÃª saiu sem digitar nÃºmeros\n");
+				exit(1);
+			} 
 		}
 
 	   scanf("%s", &continuar);
@@ -57,4 +60,3 @@ int main () {
 
 	return 0;
 }
-
