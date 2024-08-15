@@ -1,0 +1,83 @@
+﻿--Questão 2)
+create table tb_cliente(cd_cliente integer not null,
+                                           nm_cliente varchar(50) not null,
+                                           nm_social varchar(30),
+                                           dt_cadastro date not null,
+                                           dt_desligamento date,
+                                           fl_sexo boolean);
+                                           
+insert into tb_cliente values(1, 'Fulano', null, '1999-03-28', '2005-06-20');        
+
+
+--Questão 3.1)
+alter table tb_cliente drop column fl_sexo
+
+
+--Questão 3.2)
+alter table tb_aluno add column fl_sexo char(1) not null default 'M' check (fl_sexo in ('M','F'));
+
+
+
+
+--Questão 4)
+--Quarto
+create table tb_a(id_a integer not null,
+                                 id_b integer not null,
+                                 id_d integer not null,
+                                 id_c integer not null);
+                                 
+alter table tb_a add constraint cpk_tb_a primary key(id_a, id_b, id_d, id_c);
+alter table tb_a add constraint cpfk_tb_a_tb_b foreign key(id_b, id_d) references tb_b(id_b, id_d);
+alter table tb_a add constraint cpfk_tb_a_tb_c foreign key(id_c, id_d) references tb_c(id_c, id_d);
+insert into tb_a values(1, 2, 3, 4);
+
+
+--------------
+--Terceiro
+create table tb_b(id_b integer not null,
+                                 id_d integer not null);
+                                 
+alter table tb_b add constraint cpk_tb_b primary key(id_b, id_d);
+alter table tb_b add constraint pfk_tb_b_tb_d foreign key(id_d) references tb_d(id_d);
+insert into tb_b values(2, 3);                                 
+                                 
+-------------
+--Segundo
+create table tb_c(id_c integer not null,
+                                 id_d integer not null);
+                                 
+alter table tb_c add constraint cpk_tb_c primary key(id_c, id_d);
+alter table tb_c add constraint pfk_tb_d foreign key(id_d) references tb_d(id_d);
+insert into tb_c values(4, 3);
+-------------
+--Primeiro
+create table tb_d(id_d integer not null);
+
+
+alter table tb_d add constraint pk_id_d primary key(id_d);
+insert into tb_d values (3);
+
+
+
+
+------------
+--Solução aqui (Quinto)
+create table tb_e(id_a integer not null,
+                                 id_b integer not null,
+                                 id_d integer not null,
+                                 id_c integer not null);
+                                 
+alter table tb_e add constraint cpk_tb_e primary key(id_a, id_b, id_d, id_c);
+alter table tb_e add constraint cpfk_tb_e_tb_a foreign key(id_a, id_b, id_c, id_d) references tb_a(id_a, id_b, id_c, id_d);
+alter table tb_e add constraint pfk_tb_e_tb_d foreign key(id_d) references tb_d(id_d);
+
+
+insert into tb_e values(1, 2, 3, 4);
+
+
+--Questão 5) 
+delete from tb_e where (id_a, id_b, id_d, id_c) is not null;
+
+
+--Questão 6)
+drop table tb_c cascade;

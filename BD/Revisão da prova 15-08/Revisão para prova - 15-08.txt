@@ -1,0 +1,31 @@
+﻿Atividade 2)
+insert into tb_cliente values(1, 'Fulano', null, '1999-03-28', '2005-06-20');
+
+
+Atividade 3.1)
+alter table tb_cliente drop column fl_sexo
+
+
+Atividade 3.2)
+não consegui, me lembro de algo relacionado ao check e default, mas não sei montar
+
+
+Atividade 4)
+create table tb_e(id_a integer not null,
+                                 id_b integer not null,
+                                 id_d integer not null,
+                                 id_c integer not null);
+                                 
+alter table tb_e add constraint cpk_tb_e primary key(id_a, id_b, id_d, id_c);
+alter table tb_e add constraint cpfk_tb_e_tb_a foreign key(id_a, id_b, id_c, id_d) references tb_a(id_a, id_b, id_c, id_d);
+alter table tb_e add constraint pfk_tb_e_tb_d foreign key(id_d) references tb_d(id_d);
+
+
+
+
+Atividade 5)
+delete from tb_e where (id_a, id_b, id_d, id_c) is not null;
+
+
+Atividade 6)
+drop table tb_c cascade;
