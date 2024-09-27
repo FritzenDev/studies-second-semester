@@ -1,0 +1,16 @@
+2. Utilizando a árvore gerada no exercício 1, mostre quais nodo são percorridos quando
+eu quero fazer a busca dos números abaixo (caso o número não esteja inserido mostre o
+caminho que seria feito):
+a) 3
+b) 22
+c) 13
+d) 7
+e) 4
+f) 28
+
+a) 15 -> 10 -> 7 -> 3
+b) 15 -> 20 -> 25 -> 22
+c) 15 -> 10 -> 13
+d) 15 -> 10 -> 7
+e) 15 -> 10 -> 7 -> 3 -> 6
+f) 15 -> 20 -> 25 -> 27
